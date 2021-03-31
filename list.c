@@ -6,7 +6,7 @@
 typedef struct Node Node;
 
 struct Node {
-    void * data;
+  const  void * data;
     Node * next;
     Node * prev;
 };
@@ -39,7 +39,7 @@ List * createList() {
 void * firstList(List * list) {
     if(list->head && list->head->data){
       list->current = list->head;
-      return list->head->data;
+      return &list->head->data;
     }
     return NULL;
 }
@@ -52,7 +52,7 @@ void * nextList(List * list) {
     
     if(list->current->next!=NULL && list->current!=NULL){
        list->current=list->current->next;
-    return list->current->data;
+    return &list->current->data;
     
     }
 
@@ -67,7 +67,7 @@ void * lastList(List * list) {
 
    
     list->current=list->tail;
-    return list->current->data;
+    return &list->current->data;
    
     
 }
@@ -79,7 +79,7 @@ void * prevList(List * list) {
     
     if(list->current->prev!=NULL && list->current!=NULL){
        list->current=list->current->prev;
-    return list->current->data;
+    return &list->current->data;
     
     }
 
