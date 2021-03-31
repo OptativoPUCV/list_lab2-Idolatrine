@@ -88,8 +88,8 @@ void * prevList(List * list) {
   
 }
 
-void pushFront(List * list, const void * data) {
-  Node* x = createNode(&data);
+void pushFront(List * list, void * data) {
+  Node* x = createNode(data);
   list->head->prev=x;
   list->head=x;
 
