@@ -134,17 +134,18 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+  void* dato = (void*) list->current->data;
   if(list->current==list->head){
     list->head=list->head->next;
     list->head->prev=NULL;
     list->current=NULL;
-
+    
     free(list->current);
     
   }
 
 
-  return NULL;
+  return dato;
 }
 
 void cleanList(List * list) {
