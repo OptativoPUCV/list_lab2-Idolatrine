@@ -94,7 +94,7 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, const void * data) {
-
+  
 
 }
 
@@ -123,12 +123,11 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    Node* aux=list->current->prev;
-    void* dato = (void*) list->current->data;
+    Node* aux=list->current->prev; 
     aux->next=list->current->next;
     free (list->current);
+    return NULL;
     
-    return dato;
 }
 
 void cleanList(List * list) {
