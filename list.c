@@ -118,7 +118,9 @@ void pushBack(List * list, const void * data) {
 }
 
 void pushCurrent(List * list, const void * data) {
-
+  list->current->next=list->current;
+  list->current->data=data;
+  list->current->prev=list->current;
 }
 
 void * popFront(List * list) {
