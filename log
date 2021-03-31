@@ -132,3 +132,9 @@ Wed Mar 31 08:02:02 UTC 2021:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 9116b1f
+Wed Mar 31 08:03:10 UTC 2021: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|0
+   [ INFO ] llamando a nextList
+322f826

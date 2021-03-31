@@ -51,7 +51,7 @@ void * nextList(List * list) {
     }
 
     
-    return NULL;
+    exit(1);
   
     
 }
